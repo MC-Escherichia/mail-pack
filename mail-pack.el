@@ -47,26 +47,17 @@
 ;; Internal libs
 (require 'gnus)
 (require 'epa-file)
-(require 'smtpmail)
+
 
 ;; External libs - installed from marmalade/melpa
 (require 'creds)
 (require 'dash)
 (require 's)
-(require 'smtpmail-async)
+
 
 (setq epa-file-cache-passphrase-for-symmetric-encryption t)
 
-(defvar smtpmail-auth-credentials "~/.authinfo.gpg")
-                                        ;
-;; smtp
-(setq message-send-mail-function 'smtpmail-send-it
-      smtpmail-starttls-credentials
-      '(("smtp.gmail.com" 587 nil nil))
-      smtpmail-default-smtp-server "smtp.gmail.com"
-      smtpmail-smtp-server "smtp.gmail.com"
-      smtpmail-smtp-service 587
-      smtpmail-debug-info t)
+
 
 ;; spell check
 (add-hook 'mu4e-compose-mode-hook
