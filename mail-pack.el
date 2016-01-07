@@ -131,6 +131,10 @@
 
 (add-hook 'mu4e-compose-pre-hook 'my-mu4e-set-account)
 
+(setq mu4e-headers-skip-duplicates t)
+(add-to-list 'mu4e-bookmarks
+             '("flag:flagged" "Starred messages" ?s)
+             t)
 
 (require 'mu4e-contrib)
 (setq mu4e-get-mail-command "mbsync -q gmail gandalf"
