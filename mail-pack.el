@@ -193,5 +193,9 @@
   (select-frame (make-frame))
   (mu4e))
 
+(require 'aggressive-fill-paragraph)
+(add-hook 'mu4e-compose-mode-hook 'aggressive-fill-paragraph-mode)
+
+
 (provide 'mail-pack)
 ;;; mail-pack.el ends here
