@@ -135,6 +135,9 @@
 (add-to-list 'mu4e-bookmarks
              '("flag:flagged" "Starred messages" ?s)
              t)
+(add-to-list 'mu4e-bookmarks
+             '("date:2d..1d" "Yesterday's messages" ?y)
+             t)
 
 (require 'mu4e-contrib)
 (setq mu4e-get-mail-command "mbsync -q gmail gandalf"
